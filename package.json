@@ -1,6 +1,7 @@
 {
-  "name": "vue3-ts-template",
-  "version": "1.0.4",
+  "name": "cn.vuejs.org-guide",
+  "version": "1.0.0",
+  "description": "Vue3 官网》指南 - 学习",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
