@@ -19,6 +19,14 @@ const ESSENTIALS_ROUTE: AppRouteRecordRaw = {
         title: "响应式",
       },
     },
+    {
+      path: "computed",
+      name: "ComputedPage",
+      component: () => import("@/views/essentials/computed.vue"),
+      meta: {
+        title: "计算属性",
+      },
+    },
   ],
 };
 
