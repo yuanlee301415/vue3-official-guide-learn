@@ -81,6 +81,15 @@ const ESSENTIALS_ROUTE: AppRouteRecordRaw = {
         title: "模板引用",
       },
     },
+
+    {
+      path: "component-basics",
+      name: "Component-basicsPage",
+      component: () => import("@/views/essentials/component-basics.vue"),
+      meta: {
+        title: "深入组件",
+      },
+    },
   ],
 };
 
