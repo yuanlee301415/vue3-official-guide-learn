@@ -27,6 +27,33 @@ const ESSENTIALS_ROUTE: AppRouteRecordRaw = {
         title: "计算属性",
       },
     },
+
+    {
+      path: "style",
+      name: "StylePage",
+      component: () => import("@/views/essentials/style.vue"),
+      meta: {
+        title: "样式绑定",
+      },
+    },
+
+    {
+      path: "list",
+      name: "ListPage",
+      component: () => import("@/views/essentials/list.vue"),
+      meta: {
+        title: "列表渲染",
+      },
+    },
+
+    {
+      path: "event-handling",
+      name: "Event-handlingPage",
+      component: () => import("@/views/essentials/event-handling.vue"),
+      meta: {
+        title: "事件处理",
+      },
+    },
   ],
 };
 
