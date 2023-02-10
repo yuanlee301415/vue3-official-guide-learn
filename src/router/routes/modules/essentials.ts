@@ -63,6 +63,15 @@ const ESSENTIALS_ROUTE: AppRouteRecordRaw = {
         title: "生命周期",
       },
     },
+
+    {
+      path: "watchers",
+      name: "WatchersPage",
+      component: () => import("@/views/essentials/watchers.vue"),
+      meta: {
+        title: "侦听器",
+      },
+    },
   ],
 };
 
