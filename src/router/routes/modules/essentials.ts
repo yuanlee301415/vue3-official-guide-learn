@@ -54,6 +54,15 @@ const ESSENTIALS_ROUTE: AppRouteRecordRaw = {
         title: "事件处理",
       },
     },
+
+    {
+      path: "lifecycle",
+      name: "LifecyclePage",
+      component: () => import("@/views/essentials/lifecycle.vue"),
+      meta: {
+        title: "生命周期",
+      },
+    },
   ],
 };
 

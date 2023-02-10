@@ -122,11 +122,11 @@ st1 = reactive({ count: 2 });
 const st2 = reactive({ count: 0 });
 let st2N = st2.count;
 st2N++;
-console.log("响应式对象赋值给变量，失去响应性：", st2.count);
+console.log("响应式对象赋值给变量，失去响应性：", st2.count, st2N);
 
 let { count: st2Count } = st2;
 st2Count++;
-console.log("响应式对象赋值给变量，失去响应性：", st2.count);
+console.log("响应式对象赋值给变量，失去响应性：", st2.count, st2Count);
 
 // 用 ref() 定义响应式变量
 console.warn("用 ref() 定义响应式变量");

@@ -6,24 +6,26 @@
   </h4>
 
   <b>for...in</b>
-  <p v-for="(val, key) in user">{{ key }}: {{ val }}</p>
+  <p v-for="(val, key) in user" :key="key">{{ key }}: {{ val }}</p>
 
   <b>for...of</b>
-  <p v-for="(val, key) of user">{{ key }}: {{ val }}</p>
+  <p v-for="(val, key) of user" :key="key">{{ key }}: {{ val }}</p>
 
   <b>index</b>
-  <p v-for="(val, key, idx) of user">{{ idx }}. {{ key }}: {{ val }}</p>
+  <p v-for="(val, key, idx) of user" :key="key">
+    {{ idx }}. {{ key }}: {{ val }}
+  </p>
 
   <h2>&lt;template&gt; 上的 v-for</h2>
   <ol>
-    <template v-for="(val, key) of user">
+    <template v-for="(val, key) of user" :key="key">
       <li>{{ key }}: {{ val }}</li>
     </template>
   </ol>
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref } from "vue";
+import { reactive } from "vue";
 
 const user = reactive({
   id: "001",
