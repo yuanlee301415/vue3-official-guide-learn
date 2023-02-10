@@ -72,6 +72,15 @@ const ESSENTIALS_ROUTE: AppRouteRecordRaw = {
         title: "侦听器",
       },
     },
+
+    {
+      path: "template-refs",
+      name: "Template-refsPage",
+      component: () => import("@/views/essentials/template-refs.vue"),
+      meta: {
+        title: "模板引用",
+      },
+    },
   ],
 };
 

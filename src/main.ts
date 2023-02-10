@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import { setupRouter } from "./router";
 import { setupStore } from "@/store";
-import "./assets/main.css";
+import "./assets/main.less";
 
 function bootstrap() {
   const app = createApp(App);
