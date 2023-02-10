@@ -4,7 +4,7 @@
 npm init vue@latest
 ```
 
-## Vue3 官网》指南 - 学习
+## [Vue3 官网》指南](https://cn.vuejs.org/) - 学习
 
 This template should help get you started developing with Vue 3 in Vite.
 
