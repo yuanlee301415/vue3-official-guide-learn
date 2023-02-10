@@ -159,7 +159,7 @@ class Gen {
     const filePath = path.join(routeDir, `modules/${this.lowerNames[0]}.ts`);
     this.dir ? this.addChildRoute() : this.genInitialRoute();
     fs.writeFileSync(filePath, this.routeCode, "utf-8");
-    this.print(`Updated route index file: "${filePath}"`);
+    this.print(`Updated route file: "${filePath}"`);
   }
 
   // 打印日志
