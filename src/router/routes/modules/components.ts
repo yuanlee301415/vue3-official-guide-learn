@@ -37,6 +37,15 @@ const COMPONENTS_ROUTE: AppRouteRecordRaw = {
         title: "组件 v-model",
       },
     },
+
+    {
+      path: "attrs",
+      name: "AttrsPage",
+      component: () => import("@/views/components/attrs.vue"),
+      meta: {
+        title: "透传 Attributes",
+      },
+    },
   ],
 };
 
