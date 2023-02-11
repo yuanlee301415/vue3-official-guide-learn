@@ -19,6 +19,15 @@ const COMPONENTS_ROUTE: AppRouteRecordRaw = {
         title: "Props",
       },
     },
+
+    {
+      path: "events",
+      name: "EventsPage",
+      component: () => import("@/views/components/events.vue"),
+      meta: {
+        title: "事件",
+      },
+    },
   ],
 };
 
