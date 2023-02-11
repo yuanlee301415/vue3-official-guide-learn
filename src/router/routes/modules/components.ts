@@ -46,6 +46,15 @@ const COMPONENTS_ROUTE: AppRouteRecordRaw = {
         title: "透传 Attributes",
       },
     },
+
+    {
+      path: "slots",
+      name: "SlotsPage",
+      component: () => import("@/views/components/slots.vue"),
+      meta: {
+        title: "插槽",
+      },
+    },
   ],
 };
 
