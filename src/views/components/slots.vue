@@ -23,7 +23,7 @@
 
   <h2>动态插槽名</h2>
   <select v-model="dynamicSlotName">
-    <option v-for="name of dynamicSlotNames" :value="name">
+    <option v-for="name of dynamicSlotNames" :value="name" :key="name">
       {{ name.charAt(0).toUpperCase() + name.slice(1) }}
     </option>
   </select>

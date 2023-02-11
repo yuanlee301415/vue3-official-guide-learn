@@ -55,6 +55,15 @@ const COMPONENTS_ROUTE: AppRouteRecordRaw = {
         title: "插槽",
       },
     },
+
+    {
+      path: "provide-inject",
+      name: "Provide-injectPage",
+      component: () => import("@/views/components/provide-inject.vue"),
+      meta: {
+        title: "依赖注入",
+      },
+    },
   ],
 };
 
