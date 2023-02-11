@@ -1,0 +1,44 @@
+{
+  "silver": [
+    {
+      "name": "Draxlr",
+      "url": "https://www.draxlr.com",
+      "img": "draxlr.svg"
+    },
+    {
+      "name": "Team Extension North America Inc",
+      "url": "https://teamextension.io",
+      "img": "team_extension_north_america_inc.png"
+    },
+    {
+      "name": "Free Bets US",
+      "url": "https://freebets.us",
+      "img": "free_bets_us.png"
+    },
+    {
+      "name": "Doximity",
+      "url": "https://technology.doximity.com/",
+      "img": "doximity.png"
+    },
+    {
+      "name": "Interflora Group",
+      "url": "https://www.interflora.fr",
+      "img": "interflora_group.png"
+    },
+    {
+      "name": "Codesmith",
+      "url": "https://codesmith.io",
+      "img": "codesmith.png"
+    },
+    {
+      "name": "Gcore",
+      "url": "https://gcore.com",
+      "img": "gcore.png"
+    },
+    {
+      "name": "awisee.agency",
+      "url": "https://awisee.agency",
+      "img": "awisee_agency.png"
+    }
+  ]
+}

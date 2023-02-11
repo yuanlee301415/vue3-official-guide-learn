@@ -1,0 +1,10 @@
+{
+  "special": [
+    {
+      "name": "appwrite",
+      "url": "https://appwrite.io",
+      "img": "appwrite.svg",
+      "description": "Open Source Firebase Alternative"
+    }
+  ]
+}

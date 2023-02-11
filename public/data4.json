@@ -1,0 +1,44 @@
+{
+  "bronze": [
+    {
+      "name": "Derek Pollard",
+      "url": "https://polyglotengineer.com/derek.pollard",
+      "img": "derek_pollard.png"
+    },
+    {
+      "name": "Earthlink",
+      "url": "https://www.earthlink.ro",
+      "img": "earthlink.png"
+    },
+    {
+      "name": "BGASoft",
+      "url": "https://www.bgasoft.com",
+      "img": "bgasoft.png"
+    },
+    {
+      "name": "RStudio",
+      "url": "https://rstudio.com",
+      "img": "rstudio.png"
+    },
+    {
+      "name": "Darkhorse Analytics",
+      "url": "https://www.darkhorseanalytics.com/",
+      "img": "darkhorse_analytics.png"
+    },
+    {
+      "name": "vuejs.de - German Vue Community",
+      "url": "https://vuejs.de",
+      "img": "vuejs_de___german_vue_community.svg"
+    },
+    {
+      "name": "Liip AG",
+      "url": "https://www.liip.ch/en",
+      "img": "liip_ag.png"
+    },
+    {
+      "name": "Bürkert Werke GmbH & Co KG",
+      "url": "https://www.burkert.com",
+      "img": "b_rkert_werke_gmbh___co_kg.png"
+    }
+  ]
+}
