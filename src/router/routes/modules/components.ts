@@ -28,6 +28,15 @@ const COMPONENTS_ROUTE: AppRouteRecordRaw = {
         title: "事件",
       },
     },
+
+    {
+      path: "v-model",
+      name: "V-modelPage",
+      component: () => import("@/views/components/v-model.vue"),
+      meta: {
+        title: "组件 v-model",
+      },
+    },
   ],
 };
 
