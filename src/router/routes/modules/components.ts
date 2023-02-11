@@ -64,6 +64,15 @@ const COMPONENTS_ROUTE: AppRouteRecordRaw = {
         title: "依赖注入",
       },
     },
+
+    {
+      path: "async",
+      name: "AsyncPage",
+      component: () => import("@/views/components/async.vue"),
+      meta: {
+        title: "异步组件",
+      },
+    },
   ],
 };
 
