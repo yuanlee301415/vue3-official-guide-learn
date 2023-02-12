@@ -19,6 +19,15 @@ const REUSABILITY_ROUTE: AppRouteRecordRaw = {
         title: "组合式函数",
       },
     },
+
+    {
+      path: "custom-directives",
+      name: "Custom-directivesPage",
+      component: () => import("@/views/reusability/custom-directives.vue"),
+      meta: {
+        title: "自定义指令",
+      },
+    },
   ],
 };
 
