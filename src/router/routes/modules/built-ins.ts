@@ -19,6 +19,15 @@ const BUILT_INS_ROUTE: AppRouteRecordRaw = {
         title: "Transition",
       },
     },
+
+    {
+      path: "transition-group",
+      name: "Transition-groupPage",
+      component: () => import("@/views/built-ins/transitionGroupPage.vue"),
+      meta: {
+        title: "TransitionGroup",
+      },
+    },
   ],
 };
 
