@@ -7,6 +7,7 @@ import ESSENTIALS_ROUTE from "@/router/routes/modules/essentials";
 import COMPONENTS_ROUTE from "@/router/routes/modules/components";
 import REUSABILITY_ROUTE from "@/router/routes/modules/reusability";
 import BUILT_INS_ROUTE from "@/router/routes/modules/built-ins";
+import SCALING_UP_ROUTE from "@/router/routes/modules/scaling-up";
 // import NESTED_ROUTE from "@/router/routes/modules/nested";
 
 export const ROOT_ROUTE: AppRouteRecordRaw = {
@@ -66,6 +67,7 @@ export const basicRoutes = [
   COMPONENTS_ROUTE,
   REUSABILITY_ROUTE,
   BUILT_INS_ROUTE,
+  SCALING_UP_ROUTE,
   // NESTED_ROUTE,
   PAGE_NOT_FOUND_ROUTE,
 ];
