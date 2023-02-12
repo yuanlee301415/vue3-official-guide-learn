@@ -28,6 +28,15 @@ const REUSABILITY_ROUTE: AppRouteRecordRaw = {
         title: "自定义指令",
       },
     },
+
+    {
+      path: "plugins",
+      name: "PluginsPage",
+      component: () => import("@/views/reusability/plugins.vue"),
+      meta: {
+        title: "插件",
+      },
+    },
   ],
 };
 
