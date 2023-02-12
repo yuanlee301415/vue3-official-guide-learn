@@ -28,6 +28,15 @@ const BUILT_INS_ROUTE: AppRouteRecordRaw = {
         title: "TransitionGroup",
       },
     },
+
+    {
+      path: "teleport",
+      name: "TeleportPage",
+      component: () => import("@/views/built-ins/teleportPage.vue"),
+      meta: {
+        title: "Teleport",
+      },
+    },
   ],
 };
 
