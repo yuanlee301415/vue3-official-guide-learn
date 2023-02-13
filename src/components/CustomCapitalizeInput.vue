@@ -15,21 +15,26 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
-  modelValue: String,
+type TargetElement = HTMLInputElement | HTMLTextAreaElement;
+
+type Props = {
+  modelValue: string;
+  modelModifiers: any;
+};
+const props = withDefaults(defineProps<Props>(), {
   modelModifiers: {
-    default: () => ({}),
+    capitalize: false,
   },
 });
+
 console.log("modelModifiers:", props.modelModifiers);
 
 const emit = defineEmits<{
   (e: "update:modelValue", value: string): void;
 }>();
 
-// Todo: type
-function emitValue(e) {
-  let value = e.target.value;
+function emitValue(e: Event) {
+  let { value } = e.target as TargetElement;
   if (props.modelModifiers.capitalize) {
     value = value.charAt(0).toUpperCase() + value.slice(1);
   }

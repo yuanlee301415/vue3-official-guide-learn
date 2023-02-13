@@ -23,12 +23,15 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-  firstName: String,
-  lastName: String,
-});
+defineProps<{
+  firstName: string;
+  lastName: string;
+}>();
 
-defineEmits(["update:firstName", "update:lastName"]);
+defineEmits<{
+  (e: "update:firstName", value: string): void;
+  (e: "update:lastName", value: string): void;
+}>();
 </script>
 
 <style scoped lang="less">

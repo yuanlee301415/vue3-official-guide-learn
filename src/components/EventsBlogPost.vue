@@ -19,7 +19,7 @@ const emit = defineEmits({
   "smaller-text": null, // 没有校验
   "larger-text": (val) => {
     // 事件触发时校验，示通过时在开发环境下警告
-    return val > 0 && val < 1;
+    return val >= 0 && val <= 1;
   },
 });
 

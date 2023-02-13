@@ -5,8 +5,8 @@
     style="
       width: 100%;
       padding: 0 5px;
-      border: 1px solid #0960bd;
-      color: #0960bd;
+      border: 1px solid #c00;
+      color: #c00;
       font-size: 1rem;
       line-height: 1;
     "
@@ -16,8 +16,12 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 
-const props = defineProps(["modelValue"]);
-const emit = defineEmits(["update:modelValue"]);
+const props = defineProps<{
+  modelValue: string;
+}>();
+const emit = defineEmits<{
+  (e: "update:modelValue", value: string): void;
+}>();
 
 const value = computed({
   get() {

@@ -14,5 +14,9 @@ type Props = {
 };
 
 defineProps<Props>();
-defineEmits(["larger-text", "smaller-text"]);
+
+defineEmits<{
+  (e: "larger-text"): void;
+  (e: "smaller-text"): void;
+}>();
 </script>
