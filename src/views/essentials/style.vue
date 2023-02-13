@@ -27,11 +27,11 @@ type SizeCls = string | undefined;
 const colorCls = ref<ColorCls>("red");
 const sizeCls = ref<SizeCls>("size-20");
 
-function handleColor(color: ColorCls) {
+function handleColor(color?: string) {
   colorCls.value = color;
 }
 
-function handleSize(size: SizeCls) {
+function handleSize(size?: number) {
   sizeCls.value = size ? `size-${size}` : void 0;
 }
 

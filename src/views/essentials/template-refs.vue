@@ -9,7 +9,7 @@
     除了使用字符串值作名字，ref attribute
     还可以绑定为一个函数，会在每次组件更新时都被调用。该函数会收到元素引用作为其第一个参数
   </h4>
-  <input type="text" :ref="(el) => (dynaRef = el)" />
+  <!--Todo:  <input type="text" :ref="(el: HTMLInputElement) => (dynaRef = el)" />-->
 
   <h2>组件上的 ref</h2>
   <UserForm ref="userFormRef" />
@@ -33,11 +33,11 @@ onMounted(() => {
 /**
  * 函数模板引用
  */
+/*
+Todo:
 console.warn("函数模板引用");
-const dynaRef = ref(null);
-onMounted(() => {
-  console.log("dynaRef:", autoFocusRef.value);
-});
+const dynaRef = ref<HTMLInputElement | null>(null);
+*/
 
 /**
  * 组件上的 ref
@@ -45,7 +45,7 @@ onMounted(() => {
 console.warn("组件上的 ref");
 const userFormRef = ref<InstanceType<typeof UserForm> | null>(null);
 onMounted(() => {
-  console.log("userFormRef.name:", userFormRef.value.name);
-  console.log("userFormRef.age:", userFormRef.value.age);
+  console.log("userFormRef.name:", userFormRef.value?.name);
+  console.log("userFormRef.age:", userFormRef.value?.age);
 });
 </script>

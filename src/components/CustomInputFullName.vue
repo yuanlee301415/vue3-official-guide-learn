@@ -1,25 +1,20 @@
 <template>
-  <div class="fullName">
-    <input
-      :value="firstName"
-      @input="$emit('update:firstName', $event.target.value)"
-      type="text"
-    />
-    <span
-      style="
-        display: inline-block;
-        width: 10%;
-        text-align: center;
-        line-height: 1;
-      "
-      >-</span
-    >
-    <input
-      :value="lastName"
-      @input="$emit('update:lastName', $event.target.value)"
-      type="text"
-    />
-  </div>
+  <details open>
+    <summary>CustomInputFullName</summary>
+    <div class="fullName">
+      <input :value="firstName" @input="handleInputFirstName" type="text" />
+      <span
+        style="
+          display: inline-block;
+          width: 10%;
+          text-align: center;
+          line-height: 1;
+        "
+        >-</span
+      >
+      <input :value="lastName" @input="handleInputLastName" type="text" />
+    </div>
+  </details>
 </template>
 
 <script lang="ts" setup>
@@ -28,10 +23,18 @@ defineProps<{
   lastName: string;
 }>();
 
-defineEmits<{
+const emit = defineEmits<{
   (e: "update:firstName", value: string): void;
   (e: "update:lastName", value: string): void;
 }>();
+
+function handleInputFirstName(e: Event) {
+  emit("update:firstName", (e.target as HTMLInputElement).value);
+}
+
+function handleInputLastName(e: Event) {
+  emit("update:lastName", (e.target as HTMLInputElement).value);
+}
 </script>
 
 <style scoped lang="less">

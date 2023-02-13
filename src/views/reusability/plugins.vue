@@ -9,7 +9,7 @@
     来为插件用户供给一些内容。举例来说，我们可以将自定义的 I18n 插件接收到的
     options 参数提供给整个应用，让任何组件都能使用这个翻译字典对象。
   </h6>
-  <pre>i18n.greetings.welcome: {{ i18n.greetings.welcome }}</pre>
+  <pre>i18n.greetings.welcome: {{ i18n?.greetings?.welcome }}</pre>
 </template>
 
 <script lang="ts" setup>
@@ -21,4 +21,5 @@ import { I18N_KEY } from "@/constant/tokens";
  * 插件中的 Provide / Inject
  */
 const i18n = inject(I18N_KEY);
+console.log("i18n:", i18n);
 </script>

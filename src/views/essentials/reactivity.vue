@@ -40,7 +40,7 @@ friends: {{ JSON.stringify(user.friends, null, 2) }}
   <h2>ref 在模板中的解包</h2>
   <h4>当 ref 在模板中作为顶层属性被访问时，它们会被自动“解包”</h4>
   <h4>仅当 ref 是模板渲染上下文的顶层属性时才适用自动“解包”</h4>
-  <pre>obj.foo: {{ obj.foo + 1 }}</pre>
+  <pre>obj.foo: {{ obj.foo.value + 1 }}</pre>
   <pre>obj.foo.value: {{ obj.foo.value + 1 }}</pre>
   <pre>解构：obj.foo: {{ destObjFoo + 1 }}</pre>
 
@@ -64,7 +64,9 @@ friends: {{ JSON.stringify(user.friends, null, 2) }}
 <script lang="ts" setup>
 import { reactive, ref } from "vue";
 
-// 深层响应性
+/**
+ * 深层响应性
+ */
 console.warn("深层响应性");
 const user = reactive({
   name: "Tom",
@@ -90,7 +92,9 @@ function handleUpdate() {
   user.friends[1].name = "Bbbb";
 }
 
-// 响应式代理 vs. 原始对象
+/**
+ * 响应式代理 vs. 原始对象
+ */
 console.warn("响应式代理 vs. 原始对象");
 const raw = {};
 const proxy = reactive(raw);
@@ -110,11 +114,13 @@ console.log(
 );
 
 const nestedRaw = {};
-const proxy2 = reactive({});
+const proxy2 = reactive({ nested: nestedRaw });
 proxy2.nested = nestedRaw;
 console.log("响应式对象内的嵌套对象依然是代理:", proxy2.nested === nestedRaw);
 
-// reactive() 的局限性
+/**
+ * reactive() 的局限性
+ */
 console.warn("reactive() 的局限性");
 let st1 = reactive({ count: 1 });
 st1 = reactive({ count: 2 });
@@ -128,7 +134,9 @@ let { count: st2Count } = st2;
 st2Count++;
 console.log("响应式对象赋值给变量，失去响应性：", st2.count, st2Count);
 
-// 用 ref() 定义响应式变量
+/**
+ * 用 ref() 定义响应式变量
+ */
 console.warn("用 ref() 定义响应式变量");
 const objectRef = ref({ count: 1 });
 
@@ -150,7 +158,9 @@ const obj = {
 };
 const { foo: destObjFoo } = obj;
 
-// ref 在模板中的解包
+/**
+ * ref 在模板中的解包
+ */
 console.warn("ref 在模板中的解包");
 const count3 = ref(3);
 const st3 = reactive({
@@ -158,7 +168,9 @@ const st3 = reactive({
 });
 st3.count = 30;
 
-// 数组和集合类型的 ref 解包
+/**
+ * 数组和集合类型的 ref 解包
+ */
 console.warn("数组和集合类型的 ref 解包");
 const books = reactive([ref("Book-0")]);
 console.log("books[0]:", books[0]);

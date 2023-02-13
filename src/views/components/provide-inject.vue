@@ -14,9 +14,15 @@
 </template>
 
 <script lang="ts" setup>
+import type { Location1, Location2 } from "#/injection";
+
 import { readonly, ref, inject, provide } from "vue";
 
-import { MESSAGE_INJECTION_KEY } from "@/constant/tokens";
+import {
+  MESSAGE_INJECTION_KEY,
+  LOCATION_1_KEY,
+  LOCATION_2_KEY,
+} from "@/constant/tokens";
 
 import InjectionComp from "@/components/InjectionComp.vue";
 import InjectionReactivityComp from "@/components/InjectionReactivityComp.vue";
@@ -34,7 +40,7 @@ const appStartTime = inject("appStartTime");
 const location1 = ref("local-1");
 const updateLocation1 = () => (location1.value = "newLocation-1");
 
-provide("location1", {
+provide<Location1>(LOCATION_1_KEY, {
   location1,
   updateLocation1,
 });
@@ -43,7 +49,7 @@ provide("location1", {
 const location2 = ref("local-2");
 const updateLocation2 = () => (location2.value = "newLocation-2");
 
-provide("location2", {
+provide<Location2>(LOCATION_2_KEY, {
   location2: readonly(location2),
   updateLocation2,
 });
