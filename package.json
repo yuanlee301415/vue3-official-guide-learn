@@ -1,6 +1,6 @@
 {
   "name": "cn.vuejs.org-guide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "[Vue3 官网》指南](https://cn.vuejs.org/) - 学习",
   "scripts": {
     "dev": "vite",
