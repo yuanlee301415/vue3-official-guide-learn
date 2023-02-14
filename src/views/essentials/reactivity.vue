@@ -173,11 +173,7 @@ st3.count = 30;
  */
 console.warn("数组和集合类型的 ref 解包");
 const books = reactive([ref("Book-0")]);
-console.log("books[0]:", books[0]);
+console.log("books[0]:", books[0].value);
 const map = reactive(new Map([["count", ref(0)]]));
-console.log("map.get('count'):", map.get("count"));
-setTimeout(() => {
-  books[0] = ref("Book-0-new");
-  map.set("count", ref(10));
-}, 1000);
+console.log("map.get('count'):", map.get("count")!.value);
 </script>

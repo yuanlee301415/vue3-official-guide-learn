@@ -12,7 +12,7 @@
 
   <h2>绑定内联样式</h2>
   <h4>绑定数组</h4>
-  <div :style="[colorStyle, borderColorStyle]">Text</div>
+  <div :style="arrStyles">Text</div>
 </template>
 
 <script lang="ts" setup>
@@ -38,13 +38,15 @@ function handleSize(size?: number) {
 /**
  * 绑定内联样式
  */
-const colorStyle = reactive({
-  color: colorCls,
-});
-const borderColorStyle = reactive({
-  border: `1px solid transparent`,
-  "border-color": colorCls,
-});
+const colorStyle = ref("#c00");
+const borderColorStyle = ref("#0c0");
+const arrStyles = reactive([
+  { color: colorStyle.value },
+  {
+    border: `2px solid transparent`,
+    "border-color": borderColorStyle.value,
+  },
+]);
 </script>
 
 <style lang="less" scoped>

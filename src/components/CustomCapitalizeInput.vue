@@ -1,17 +1,20 @@
 <template>
-  <input
-    :value="modelValue"
-    @input="emitValue"
-    type="text"
-    style="
-      width: 100%;
-      padding: 0 5px;
-      border: 1px solid #0960bd;
-      color: #0960bd;
-      font-size: 1rem;
-      line-height: 1;
-    "
-  />
+  <details open>
+    <summary>CustomCapitalizeInput</summary>
+    <input
+      :value="modelValue"
+      @input="emitValue"
+      type="text"
+      style="
+        width: 100%;
+        padding: 0 5px;
+        border: 1px solid #0960bd;
+        color: #0960bd;
+        font-size: 1rem;
+        line-height: 1;
+      "
+    />
+  </details>
 </template>
 
 <script lang="ts" setup>

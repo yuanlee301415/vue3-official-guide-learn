@@ -1,5 +1,8 @@
 <template>
-  <pre>Inject title: {{ title }}</pre>
+  <details open>
+    <summary>ProvideInjectType</summary>
+    <pre>Inject title: {{ title }}</pre>
+  </details>
 </template>
 
 <script lang="ts" setup>

@@ -1,10 +1,12 @@
 <template>
-  <div class="blogPost">
-    <h6 class="title">{{ title }}</h6>
+  <details open>
+    <summary>BlogPost</summary>
+    <b class="title">{{ title }}</b
+    ><br />
     <button @click="$emit('larger-text')">larger-text</button>
     <button @click="$emit('smaller-text')">smaller-text</button>
     <section class="content">{{ content }}</section>
-  </div>
+  </details>
 </template>
 
 <script lang="ts" setup>

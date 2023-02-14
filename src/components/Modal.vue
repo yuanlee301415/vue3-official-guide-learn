@@ -1,23 +1,24 @@
 <template>
-  <button @click="visible = true">Open</button>
-
-  <Teleport :to="to ?? 'body'">
-    <div v-if="visible" class="modal">
-      <div class="title">Title</div>
-      <div class="content">Content</div>
-      <button @click="visible = false">Close</button>
-    </div>
-  </Teleport>
+  <details open>
+    <summary>Modal</summary>
+    <button @click="visible = true">Open</button>
+    <Teleport :to="to">
+      <div v-if="visible" class="modal">
+        <div class="title">Title</div>
+        <div class="content">Content</div>
+        <button @click="visible = false">Close</button>
+      </div>
+    </Teleport>
+  </details>
 </template>
 
 <script lang="ts" setup>
 import { ref } from "vue";
 
 const visible = ref(false);
-const props = withDefaults(defineProps<{ to: string }>(), {
+withDefaults(defineProps<{ to?: string }>(), {
   to: "body",
 });
-console.log(props.to);
 </script>
 
 <style scoped>

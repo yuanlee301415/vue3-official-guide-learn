@@ -1,9 +1,12 @@
 <template>
-  <ol class="list">
-    <li v-for="item of list" :key="item.id">
-      <slot name="item" v-bind="item" />
-    </li>
-  </ol>
+  <details open>
+    <summary>ScopedNameSlotList</summary>
+    <ol class="list">
+      <li v-for="item of list" :key="item.id">
+        <slot name="item" v-bind="item" />
+      </li>
+    </ol>
+  </details>
 </template>
 
 <script lang="ts" setup>

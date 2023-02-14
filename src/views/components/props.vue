@@ -3,7 +3,8 @@
   <BlogPost v-bind="blog" />
 
   <h2>Prop 校验</h2>
-  <pre>
+  <h6>
+    <pre>
 一些补充细节：
 
 所有 prop 默认都是可选的，除非声明了 required: true。
@@ -15,13 +16,16 @@ Boolean 类型的未传递 prop 将被转换为 false。这可以通过为它设
 如果声明了 default 值，那么在 prop 的值被解析为 undefined 时，无论 prop 是未被传递还是显式指明的 undefined，都会改为 default 值。
 
 当 prop 的校验失败后，Vue 会抛出一个控制台警告 (在开发模式下)。
-  </pre>
+  </pre
+    >
+  </h6>
+
   <ValidationUserProfile :age="userProfile.age" :name="userProfile.name" />
 
   <h2>运行时类型检查</h2>
-  <pre>
+  <h6>
+    <pre>
 校验选项中的 type 可以是下列这些原生构造函数：
-
 String
 Number
 Boolean
@@ -32,7 +36,8 @@ Function
 Symbol
 另外，type 也可以是自定义的类或构造函数，Vue 将会通过 instanceof 来检查类型是否匹配。
 </pre
-  >
+    >
+  </h6>
 
   <ValidationConstructorUserProfile :user="userInfo" />
 </template>

@@ -1,7 +1,7 @@
 <template>
   <details open>
-    <summary>ScopedSlot</summary>
-    <slot text="Hello" count="1" />
+    <summary>DynamicComponents</summary>
+    <b>A</b>
   </details>
 </template>
 

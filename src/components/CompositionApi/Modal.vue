@@ -1,13 +1,17 @@
 <template>
-  <button @click="open">Open</button>
+  <details open>
+    <summary>Modal</summary>
 
-  <Teleport :to="to">
-    <div v-if="visible" class="modal">
-      <div class="title">Title</div>
-      <div class="content">Content</div>
-      <button @click="close">Close</button>
-    </div>
-  </Teleport>
+    <button @click="open">Open</button>
+
+    <Teleport :to="to">
+      <div v-if="visible" class="modal">
+        <div class="title">Title</div>
+        <div class="content">Content</div>
+        <button @click="close">Close</button>
+      </div>
+    </Teleport>
+  </details>
 </template>
 
 <script lang="ts" setup>

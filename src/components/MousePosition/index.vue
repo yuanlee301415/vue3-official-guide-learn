@@ -1,5 +1,9 @@
 <template>
-  <div>Mouse position is: [{{ mouseX }}, {{ mouseY }}]</div>
+  <details open>
+    <summary>MousePosition</summary>
+
+    <div>Mouse position is: [{{ mouseX }}, {{ mouseY }}]</div>
+  </details>
 </template>
 
 <script lang="ts" setup>

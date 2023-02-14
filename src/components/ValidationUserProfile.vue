@@ -1,15 +1,19 @@
 <template>
-  <b>用户信息组件(数据类型、校验)：</b>
-  <table width="100%" border="1" cellspacing="0">
-    <tr>
-      <th width="20%">Name:</th>
-      <td>{{ name }}</td>
-    </tr>
-    <tr>
-      <th>Age:</th>
-      <td>{{ age }}</td>
-    </tr>
-  </table>
+  <details open>
+    <summary>ValidationUserProfile</summary>
+
+    <b>用户信息组件(数据类型、校验)：</b>
+    <table width="100%" border="1" cellspacing="0">
+      <tr>
+        <th width="20%">Name:</th>
+        <td>{{ name }}</td>
+      </tr>
+      <tr>
+        <th>Age:</th>
+        <td>{{ age }}</td>
+      </tr>
+    </table>
+  </details>
 </template>
 
 <script lang="ts" setup>

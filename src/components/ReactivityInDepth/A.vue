@@ -1,6 +1,8 @@
 <template>
-  <h6>ReactivityInDepthA</h6>
-  <pre>Title: {{ title }}</pre>
+  <details open>
+    <summary>ReactivityInDepthA</summary>
+    <pre>Title: {{ title }}</pre>
+  </details>
 </template>
 
 <script lang="ts" setup>

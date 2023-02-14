@@ -1,6 +1,10 @@
 <template>
-  <pre>必填属性: {{ props.requiredProp }}</pre>
-  <pre>可选属性: {{ props.optionalProp }}</pre>
+  <details open>
+    <summary>PropComp</summary>
+
+    <pre>必填属性: {{ props.requiredProp }}</pre>
+    <pre>可选属性: {{ props.optionalProp }}</pre>
+  </details>
 </template>
 
 <script lang="ts" setup>

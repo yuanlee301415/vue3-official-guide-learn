@@ -6,16 +6,19 @@
   </h4>
 
   <h6>在模板中定义</h6>
-  <input type="text" v-inner-focus />
+  <div v-red-border>Text</div>
 
   <h6>外部文件定义</h6>
-  <input type="text" v-outer-focus />
+  <input type="text" v-focus />
 </template>
 
 <script lang="ts" setup>
-import vOuterFocus from "@/directives/focus";
+import vFocus from "@/directives/focus";
 
-const vInnerFocus = {
-  mounted: (el: HTMLInputElement) => el.focus(),
+/**
+ * 在模板中定义
+ */
+const vRedBorder = {
+  mounted: (el: HTMLInputElement) => (el.style.border = "1px solid #c00"),
 };
 </script>

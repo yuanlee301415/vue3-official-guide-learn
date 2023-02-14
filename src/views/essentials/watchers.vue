@@ -67,25 +67,30 @@ watchEffect(() => {
 <script lang="ts" setup>
 import { reactive, ref, watch, watchEffect, watchPostEffect } from "vue";
 
+/**
+ * 侦听数据源类型
+ */
+console.warn("侦听数据源类型");
 const x = ref(1);
 const y = ref(2);
 
-console.warn("getter 函数");
+/**
+ * 监听 getter 函数
+ */
 watch(
   () => x.value + y.value,
-  (sum) => console.log({ sum })
+  (sum) => console.log("监听 getter 函数 》 sum:", sum)
 );
 
 /**
  * 多个来源组成的数组
  */
-// 多个来源组成的数组
 watch([x, y], ([newX, newY]) => {
-  console.log({ newX, newY });
+  console.log("多个来源组成的数组:", { newX, newY });
 });
 
 watch([() => x.value, () => y.value], ([newXValue, newYValue]) => {
-  console.log({ newXValue, newYValue });
+  console.log("多个来源组成的数组:", { newXValue, newYValue });
 });
 
 /**
@@ -93,8 +98,8 @@ watch([() => x.value, () => y.value], ([newXValue, newYValue]) => {
  */
 console.warn("深层侦听器");
 const deepObj = reactive({ count: 0 });
-watch(deepObj, () => {
-  console.log("deepObj.count:", deepObj.count);
+watch(deepObj, (value) => {
+  console.log("deepObj.count:", value);
 });
 deepObj.count++;
 

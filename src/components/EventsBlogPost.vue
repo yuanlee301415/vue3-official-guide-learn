@@ -1,10 +1,13 @@
 <template>
-  <div class="blogPost">
-    <h6 class="title">{{ title }}</h6>
-    <button @click="handleLarger">larger-text</button>
-    <button @click="handleSmaller">smaller-text</button>
-    <section class="content">{{ content }}</section>
-  </div>
+  <details open>
+    <summary>EventsBlogPost</summary>
+    <div class="blogPost">
+      <h6 class="title">{{ title }}</h6>
+      <button @click="handleLarger">larger-text</button>
+      <button @click="handleSmaller">smaller-text</button>
+      <section class="content">{{ content }}</section>
+    </div>
+  </details>
 </template>
 
 <script lang="ts" setup>
