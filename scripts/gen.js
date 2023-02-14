@@ -1,6 +1,19 @@
 #!/usr/bin/env node
 /* eslint-disable */
 
+/**
+ * 接收参数1：路由名称1[/路由名称2]
+ *  1.单个路由名称，必须是合法的 JS 变量名
+ *  2.会将其全部大写后，注入到 router 的 JS 代码中
+ *  3.会将其全部小写后，做为页面 URL 路径
+ *
+ * 接收参数2：页面标题1[/页面标题2]
+ *  1.支持中文
+ *  2.会将其内容原样做为对应的菜单项文本
+ *
+ * 调用方式：`npm run gen 路由名称1[/路由名称2] 页面标题1[/页面标题2] `
+ */
+
 const path = require("path");
 const fs = require("fs");
 const cwd = process.cwd();
