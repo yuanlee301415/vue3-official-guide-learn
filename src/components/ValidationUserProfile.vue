@@ -17,7 +17,9 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
+import { isReactive } from "vue";
+
+const props = defineProps({
   name: {
     type: String,
     required: true,
@@ -33,6 +35,7 @@ defineProps({
     type: [Date, Number, String],
   },
 });
+console.log("props:", props, isReactive(props));
 </script>
 
 <style scoped></style>
