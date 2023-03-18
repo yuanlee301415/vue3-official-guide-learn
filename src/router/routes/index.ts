@@ -10,6 +10,7 @@ import BUILT_INS_ROUTE from "@/router/routes/modules/built-ins";
 import SCALING_UP_ROUTE from "@/router/routes/modules/scaling-up";
 import TYPESCRIPT_ROUTE from "@/router/routes/modules/typescript";
 import EXTRAS_ROUTE from "@/router/routes/modules/extras";
+import WATCHERS_ROUTE from "@/router/routes/modules/watchers";
 // import NESTED_ROUTE from "@/router/routes/modules/nested";
 
 export const ROOT_ROUTE: AppRouteRecordRaw = {
@@ -72,6 +73,7 @@ export const basicRoutes = [
   SCALING_UP_ROUTE,
   TYPESCRIPT_ROUTE,
   EXTRAS_ROUTE,
+  WATCHERS_ROUTE,
   // NESTED_ROUTE,
   PAGE_NOT_FOUND_ROUTE,
 ];
