@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from "vue";
+import { computed, isRef, ref } from "vue";
 
 // 可写计算属性
 console.warn("可写计算属性");
@@ -26,7 +26,7 @@ const fullName = computed({
     [firstName.value, lastName.value] = val.split(" ");
   },
 });
-console.log("fullName:", fullName.value);
+console.log("fullName:", fullName, isRef(fullName));
 function setFullName() {
   fullName.value = "John2 Doe2";
 }
